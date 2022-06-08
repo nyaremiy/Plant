@@ -1,0 +1,18 @@
+@import './../../styles/index.scss';
+
+.nav {
+  color: $c-eerie-black;
+}
+.list {
+  align-items: center;
+  display: flex;
+}
+.item {
+  margin-right: 50px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.active {
+  color: $c-golden-poppy;
+}

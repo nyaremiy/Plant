@@ -1,0 +1,18 @@
+@import './../../styles/index.scss';
+
+.button {
+  background-color: $c-brunswick-green;
+  border-style: none;
+  width: fit-content;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0 30px;
+  color: white;
+  height: 45px;
+}
+.transparent {
+  background-color: transparent;
+  color: $c-eerie-black;
+  margin-right: 15px;
+}
