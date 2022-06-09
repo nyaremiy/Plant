@@ -5,7 +5,7 @@ const Button = ({ text, type, classes, ...props }) => {
   return (
     <button
       type={type || 'button'}
-      className={classNames(styles.button, classes)}
+      className={classNames(styles.button, styles[classes])}
       {...props}
     >
       <span>{text}</span>

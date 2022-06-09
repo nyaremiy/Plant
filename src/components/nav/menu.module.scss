@@ -1,0 +1,143 @@
+@import './../../styles/variables.scss';
+
+.menu {
+  align-items: center;
+  display: flex;
+}
+
+.activeLink {
+  color: $c-imperial;
+  &::before {
+    transform: scale(1);
+  }
+  @media (max-width: 768px) {
+    color: $c-golden-poppy;
+  }
+}
+a {
+  color: $c-eerie-black;
+  position: relative;
+  padding: 5px;
+  &::before {
+    content: '';
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: $c-imperial;
+    transition: all 0.1s linear;
+    transform: scale(0);
+    @media (max-width: 768px) {
+      background-color: $c-golden-poppy;
+    }
+  }
+  @media (max-width: 768px) {
+    color: $c-white;
+  }
+}
+
+.list {
+  align-items: center;
+  display: flex;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+  @media (max-width: 768px) {
+    padding: 100px 0;
+  }
+}
+.item {
+  margin-right: 50px;
+  &:last-child {
+    margin-right: 0;
+  }
+  @media (max-width: 1024px) {
+    margin-right: 20px;
+    font-size: 14px;
+  }
+  @media (max-width: 768px) {
+    margin-bottom: 30px;
+    font-size: 20px;
+    margin-right: 0;
+  }
+}
+
+.buttons {
+  margin-left: 70px;
+  @media (max-width: 1024px) {
+    margin-left: 20px;
+  }
+}
+
+.blockNav {
+  z-index: 14;
+  transition: $tr-base;
+  align-items: center;
+  display: flex;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    position: absolute;
+    right: -100%;
+    top: 0;
+    background-color: $c-brunswick-green2;
+    height: 100%;
+    width: 60%;
+  }
+  @media (max-width: 480px) {
+    width: 100%;
+  }
+}
+
+.burger {
+  z-index: 15;
+  cursor: pointer;
+  position: relative;
+  width: 30px;
+  height: 21px;
+  display: none;
+  @media (max-width: 768px) {
+    display: block;
+  }
+}
+.line {
+  transition: $tr-base;
+  width: 100%;
+  height: 3px;
+  display: block;
+  background-color: $c-eerie-black;
+  border-radius: 8px;
+  position: absolute;
+  &:nth-child(1) {
+    left: 0;
+    top: 0;
+  }
+  &:nth-child(2) {
+    left: 0;
+    top: 9px;
+  }
+  &:nth-child(3) {
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.burgerActive {
+  span {
+    &:nth-child(1) {
+      transform: rotate(45deg);
+      top: 9px;
+    }
+    &:nth-child(2) {
+      opacity: 0;
+    }
+    &:nth-child(3) {
+      transform: rotate(-45deg);
+      bottom: 9px;
+    }
+  }
+}
+
+.showMenu {
+  right: 0;
+}

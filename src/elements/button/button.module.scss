@@ -1,7 +1,8 @@
-@import './../../styles/index.scss';
+@import './../../styles/variables.scss';
 
 .button {
   background-color: $c-brunswick-green;
+  transition: $tr-base;
   border-style: none;
   width: fit-content;
   border-radius: 4px;
@@ -12,7 +13,18 @@
   height: 45px;
 }
 .transparent {
+  border: 1px solid transparent;
   background-color: transparent;
   color: $c-eerie-black;
   margin-right: 15px;
+  &:hover {
+    border-color: $c-eerie-black;
+  }
+  @media (max-width: 1024px) {
+    border-color: $c-eerie-black;
+  }
+  @media (max-width: 768px) {
+    border-color: $c-white;
+    color: $c-white;
+  }
 }
