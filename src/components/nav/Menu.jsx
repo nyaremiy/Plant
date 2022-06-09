@@ -5,12 +5,25 @@ import Button from '../../elements/button/Button';
 import styles from './menu.module.scss';
 
 const Menu = () => {
+  // Стан бургера
   const [burger, setBurger] = useState(false);
 
+  // Додаю клас до активної силки
   const setActive = ({ isActive }) => (isActive ? styles.activeLink : null);
+
+  // Закриваю бургер
+  const closeMenu = () => {
+    setBurger(false);
+  };
 
   return (
     <div className={styles.menu}>
+      {/* Blur */}
+      <div
+        className={burger ? styles.blur : null}
+        onClick={closeMenu}
+        onTouchMove={closeMenu}
+      ></div>
       {/* Burger */}
       <div
         className={classNames(
@@ -31,27 +44,27 @@ const Menu = () => {
         <nav className={styles.nav}>
           <ul className={styles.list}>
             <li className={styles.item}>
-              <NavLink to='/' className={setActive}>
+              <NavLink to='/' className={setActive} onClick={closeMenu}>
                 Home
               </NavLink>
             </li>
             <li className={styles.item}>
-              <NavLink to='services' className={setActive}>
+              <NavLink to='services' className={setActive} onClick={closeMenu}>
                 Services
               </NavLink>
             </li>
             <li className={styles.item}>
-              <NavLink to='about' className={setActive}>
+              <NavLink to='about' className={setActive} onClick={closeMenu}>
                 About Us
               </NavLink>
             </li>
             <li className={styles.item}>
-              <NavLink to='blog' className={setActive}>
+              <NavLink to='blog' className={setActive} onClick={closeMenu}>
                 Blog
               </NavLink>
             </li>
             <li className={styles.item}>
-              <NavLink to='contact' className={setActive}>
+              <NavLink to='contact' className={setActive} onClick={closeMenu}>
                 Contact
               </NavLink>
             </li>
@@ -59,8 +72,8 @@ const Menu = () => {
         </nav>
         {/* Buttons */}
         <div className={styles.buttons}>
-          <Button text='Login' classes='transparent' />
-          <Button text='Sing Up' />
+          <Button text='Login' classes='transparent' onClick={closeMenu} />
+          <Button text='Sing Up' onClick={closeMenu} />
         </div>
       </div>
     </div>

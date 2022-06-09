@@ -9,13 +9,6 @@ const Header = () => {
       <div className={classNames('container', styles.wrapper)}>
         <Logo />
         <Menu />
-        {/* <div className={styles.navigation}>
-          <Nav />
-          <div className={styles.buttons}>
-            <Button text='Login' classes={stylesBtn.transparent} />
-            <Button text='Sing Up' />
-          </div>
-        </div> */}
       </div>
     </header>
   );

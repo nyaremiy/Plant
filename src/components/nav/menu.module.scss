@@ -68,6 +68,11 @@ a {
   @media (max-width: 1024px) {
     margin-left: 20px;
   }
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
 }
 
 .blockNav {
@@ -77,12 +82,14 @@ a {
   display: flex;
   @media (max-width: 768px) {
     flex-direction: column;
-    position: absolute;
+    position: fixed;
+    overflow-y: scroll;
     right: -100%;
     top: 0;
+    bottom: 0;
     background-color: $c-brunswick-green2;
-    height: 100%;
     width: 60%;
+    padding-bottom: 100px;
   }
   @media (max-width: 480px) {
     width: 100%;
@@ -140,4 +147,16 @@ a {
 
 .showMenu {
   right: 0;
+}
+
+.blur {
+  @media (min-width: 480px) and (max-width: 768px) {
+    z-index: 13;
+    backdrop-filter: blur(2px);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
 }
