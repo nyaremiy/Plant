@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import Logo from '../../elements/logo/Logo';
 import styles from './header.module.scss';
-import Menu from '../nav/Menu';
+import Menu from '../menu/Menu';
 
 const Header = () => {
   return (

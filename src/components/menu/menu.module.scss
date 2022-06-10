@@ -153,10 +153,14 @@ a {
   @media (min-width: 480px) and (max-width: 768px) {
     z-index: 13;
     backdrop-filter: blur(2px);
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
   }
+}
+
+.whiteLine {
+  background-color: white;
 }

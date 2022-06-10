@@ -11,6 +11,12 @@ const Menu = () => {
   // Додаю клас до активної силки
   const setActive = ({ isActive }) => (isActive ? styles.activeLink : null);
 
+  const deleteScroll = () => {
+    if (!burger) {
+      document.querySelector('body').classList.toggle('no-scroll');
+    }
+  };
+
   // Закриваю бургер
   const closeMenu = () => {
     setBurger(false);
@@ -30,11 +36,19 @@ const Menu = () => {
           styles.burger,
           burger ? styles.burgerActive : null
         )}
-        onClick={() => setBurger(!burger)}
+        onClick={() => {
+          setBurger(!burger);
+        }}
       >
-        <span className={styles.line}></span>
-        <span className={styles.line}></span>
-        <span className={styles.line}></span>
+        <span
+          className={classNames(styles.line, burger ? styles.whiteLine : null)}
+        ></span>
+        <span
+          className={classNames(styles.line, burger ? styles.whiteLine : null)}
+        ></span>
+        <span
+          className={classNames(styles.line, burger ? styles.whiteLine : null)}
+        ></span>
       </div>
       {/* Navigation block */}
       <div

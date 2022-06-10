@@ -3,6 +3,11 @@
 .header {
   box-shadow: 0px 5px 5px -5px rgba($c-eerie-black, 0.6);
   z-index: 12;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: $c-white;
 }
 .wrapper {
   justify-content: space-between;
