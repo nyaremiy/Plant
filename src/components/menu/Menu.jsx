@@ -11,11 +11,12 @@ const Menu = () => {
   // Додаю клас до активної силки
   const setActive = ({ isActive }) => (isActive ? styles.activeLink : null);
 
-  const deleteScroll = () => {
-    if (!burger) {
-      document.querySelector('body').classList.toggle('no-scroll');
-    }
-  };
+  // TODO: Доробити
+  // const deleteScroll = () => {
+  //   if (!burger) {
+  //     document.querySelector('body').classList.toggle('no-scroll');
+  //   }
+  // };
 
   // Закриваю бургер
   const closeMenu = () => {

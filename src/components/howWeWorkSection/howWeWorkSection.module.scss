@@ -1,0 +1,97 @@
+@import './../../styles/variables.scss';
+
+.howWeWorkSection {
+  position: relative;
+}
+.wrapper {
+  padding-top: 120px;
+  padding-bottom: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media (max-width: 1024px) {
+    padding-top: 65px;
+  }
+  @media (max-width: 480px) {
+    padding-top: 15px;
+  }
+}
+.imageBox {
+  max-width: 444px;
+  min-width: 444px;
+  @media (max-width: 1024px) {
+    min-width: 360px;
+  }
+  @media (max-width: 768px) {
+    min-width: 0;
+  }
+  @media (max-width: 480px) {
+    display: none;
+  }
+}
+.greenBlock {
+  display: block;
+  width: 100%;
+  height: 482px;
+  background-color: $c-brunswick-green2;
+  position: absolute;
+  left: -68%;
+  top: 8%;
+  z-index: -1;
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+.block {
+  margin-left: 80px;
+  max-width: 500px;
+  @media (max-width: 1024px) {
+    margin-left: 40px;
+  }
+  @media (max-width: 768px) {
+    margin-left: 60px;
+    right: 0;
+    position: absolute;
+    padding: 20px 30px;
+    background-color: $c-light-cyan;
+    border-radius: 10px 0 0 10px;
+  }
+  @media (max-width: 480px) {
+    margin: 0;
+    position: static;
+    background-color: $c-white;
+    padding: 0;
+  }
+}
+.title {
+  color: $c-eerie-black;
+  font-weight: 600;
+  font-size: 48px;
+  @media (max-width: 1024px) {
+    font-size: 40px;
+  }
+  @media (max-width: 768px) {
+    font-size: 32px;
+  }
+}
+.desc {
+  margin-top: 15px;
+  color: $c-davys-grey;
+  line-height: 28px;
+  @media (max-width: 1024px) {
+    margin-top: 5px;
+  }
+  @media (max-width: 768px) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+.ourAdvantages {
+  margin-top: 40px;
+  @media (max-width: 1024px) {
+    margin-top: 10px;
+  }
+  @media (max-width: 480px) {
+    margin-top: 30px;
+  }
+}
