@@ -1,6 +1,7 @@
 @import './../../styles/variables.scss';
 
 .button {
+  white-space: nowrap;
   background-color: $c-brunswick-green;
   transition: $tr-base;
   border-style: none;

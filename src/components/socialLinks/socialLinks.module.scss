@@ -1,0 +1,14 @@
+@import './../../styles/variables.scss';
+
+.socialLinks {
+  display: flex;
+  margin-right: 30px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.icon {
+  cursor: pointer;
+  color: $c-cal-poly-pomona-green;
+  font-size: 24px;
+}

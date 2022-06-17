@@ -1,0 +1,26 @@
+@import './../../styles/variables.scss';
+
+.wrapper {
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+.block {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 50px;
+}
+.blockText {
+  max-width: 720px;
+  margin-right: 30px;
+}
+.title {
+  font-weight: 600;
+  font-size: 48px;
+  color: $c-eerie-black;
+}
+.desc {
+  color: $c-davys-grey;
+  line-height: 28px;
+  margin-top: 15px;
+}
